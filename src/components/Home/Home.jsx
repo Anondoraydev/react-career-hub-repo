@@ -5,7 +5,7 @@ import FeaturedJobs from "../FeaturedJobs/FeaturedJobs";
  
 const Home = () => {
     return (
-        <div className="max-w-[1320px] m-auto">
+        <div>
             <Banner />
             <CatagoryList />
             <FeaturedJobs/>
