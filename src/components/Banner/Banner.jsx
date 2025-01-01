@@ -1,11 +1,11 @@
  
-
+import Benner from "../../assets/images/Banner.png";
 const Banner = () => {
     return (
-        <div>
-            <h2 className="text-5xl text-center">banner part</h2>
-        </div>
-    );
+        <div className="py-10"> 
+				<img src={Benner} alt="Banner.png" className="w-full" />
+			</div>
+		);
 };
 
 export default Banner;

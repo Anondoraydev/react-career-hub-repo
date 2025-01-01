@@ -1,11 +1,10 @@
- 
-
-const Job = ({job}) => {
-    return (
-        <div>
-            <h2>job</h2>
-        </div>
-    );
+const Job = ({ job }) => {
+	const {logo} = job;
+	return (
+		<div>
+			<img src={logo} alt="" /> 
+		</div>
+	);
 };
 
 export default Job;
