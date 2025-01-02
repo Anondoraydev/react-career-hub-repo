@@ -2,15 +2,15 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { saveJobAppliction } from "../utility/localStorge";
 const JobDetelis = () => {
-	const notify = () => {
-		saveJobAppliction(id);
-		toast("Wow so easy !");
-	};
 	const jobs = useLoaderData();
 	const { id } = useParams();
 	const idInt = parseInt(id);
 	const job = jobs.find((job) => job.id === idInt);
 	console.log(job);
+	const notify = () => {
+		saveJobAppliction(idInt);
+		toast("Wow so easy !");
+	};
 	return (
 		<div className="pb-10">
 			<h2 className="font-extrabold text-[32px] text-center mt-10 mb-10">
