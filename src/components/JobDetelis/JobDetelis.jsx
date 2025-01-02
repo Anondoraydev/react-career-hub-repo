@@ -1,6 +1,11 @@
 import { useLoaderData, useParams } from "react-router-dom";
-
+import { ToastContainer, toast } from "react-toastify";
+import { saveJobAppliction } from "../utility/localStorge";
 const JobDetelis = () => {
+	const notify = () => {
+		saveJobAppliction(id);
+		toast("Wow so easy !");
+	};
 	const jobs = useLoaderData();
 	const { id } = useParams();
 	const idInt = parseInt(id);
@@ -67,7 +72,12 @@ const JobDetelis = () => {
 							</span>
 						</h2>
 					</div>
-					<button className="btn btn-primary w-full mt-5">Apply Now</button>
+					<button
+						onClick={notify}
+						className="btn btn-primary w-full mt-5 grid place-items-center ">
+						Apply Now
+					</button>
+					<ToastContainer />
 				</div>
 			</div>
 		</div>
