@@ -25,7 +25,7 @@ const router = createBrowserRouter([
 			{
 				path: "/job/:id",
 				element: <JobDetelis />,
-				loader: () => fetch("../jobs.json"),
+				loader: () => fetch("../jobs.json"), //akhane ai vabe sob data ak sonnge sob data loed kora thik na j tuku data lagbe sei tuku data akhan theke lod korte hobe
 			},
 		],
 	},

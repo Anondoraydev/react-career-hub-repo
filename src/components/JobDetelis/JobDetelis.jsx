@@ -35,32 +35,39 @@ const JobDetelis = () => {
 						</h2>
 					</div>
 				</div>
-				<div className="border bg-[#e1d6ff] p-6">
-					<h2 className="font-bold text-black pb-8">Job Details</h2>
+				<div>
+					<div className="border bg-[#e1d6ff] p-6">
+						<h2 className="font-bold text-black pb-8">Job Details</h2>
 
-					<h2 className="font-bold text-black pb-2">
-						Salary :<span className="font-normal">{job.salary} </span>
-					</h2>
-					<h2 className="font-bold text-black pb-2">
-						Job Title :<span className="font-normal">{job.job_title} </span>
-					</h2>
+						<h2 className="font-bold text-black pb-2">
+							Salary :<span className="font-normal">{job.salary} </span>
+						</h2>
+						<h2 className="font-bold text-black pb-2">
+							Job Title :<span className="font-normal">{job.job_title} </span>
+						</h2>
 
-					<h2 className="font-bold text-black pb-8">Contact Information</h2>
+						<h2 className="font-bold text-black pb-8">Contact Information</h2>
 
-					<h2 className="font-bold text-black pb-2">
-						Phone :
-						<span className="font-normal">{job.contact_information.phone}</span>
-					</h2>
-					<h2 className="font-bold text-black pb-2">
-						Email :
-						<span className="font-normal">{job.contact_information.email}</span>
-					</h2>
-					<h2 className="font-bold text-black pb-2">
-						Address :
-						<span className="font-normal">
-							{job.contact_information.address}
-						</span>
-					</h2>
+						<h2 className="font-bold text-black pb-2">
+							Phone :
+							<span className="font-normal">
+								{job.contact_information.phone}
+							</span>
+						</h2>
+						<h2 className="font-bold text-black pb-2">
+							Email :
+							<span className="font-normal">
+								{job.contact_information.email}
+							</span>
+						</h2>
+						<h2 className="font-bold text-black pb-2">
+							Address :
+							<span className="font-normal">
+								{job.contact_information.address}
+							</span>
+						</h2>
+					</div>
+					<button className="btn btn-primary w-full mt-5">Apply Now</button>
 				</div>
 			</div>
 		</div>

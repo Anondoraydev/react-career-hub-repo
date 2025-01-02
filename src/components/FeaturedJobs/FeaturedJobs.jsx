@@ -21,7 +21,7 @@ const FeaturedJobs = () => {
 					need. Its your future
 				</p>
 			</div>
-			<div className="grid grid-cols-2 gap-6">
+			<div className="grid grid-cols-2 gap-6 mt-14">
 				{/* jodi disply te com data dekhate chai ta hole slice korte hobe */}
 
 				{jobs.slice(0, dataLength).map((job) => (
