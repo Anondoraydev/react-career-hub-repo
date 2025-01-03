@@ -6,6 +6,8 @@ import { getStordJobAppliction } from "../utility/localStorge";
 
 const AppliedJobs = () => {
 	const [appliedJobs, setAppliedJobs] = useState([]);
+	const [displyJobs, setDisplyJobs] = useState([]);
+
 	const jobs = useLoaderData();
 	useEffect(() => {
 		const stordJobIds = getStordJobAppliction();
@@ -20,21 +22,37 @@ const AppliedJobs = () => {
 				}
 			}
 			setAppliedJobs(jobsApplied);
+			setDisplyJobs(jobsApplied);
 			// console.log(jobs, stordJobIds, jobsApplied);
 		}
-	}, []);
+	}, [jobs]);
+	const handleJobsFilter = (filter) => {
+		if (filter === "all") {
+			setDisplyJobs(appliedJobs);
+		} else if (filter === "remote") {
+			const remoteJobs = appliedJobs.filter(
+				(job) => job.remote_or_onsite === "Remote"
+			);
+			setDisplyJobs(remoteJobs);
+		} else if (filter === "onsite") {
+			const onsiteJobs = appliedJobs.filter(
+				(job) => job.remote_or_onsite === "Onsite"
+			);
+			setDisplyJobs(onsiteJobs);
+		}
+	};
 	return (
 		<div>
 			<details className="dropdown">
 				<summary className="btn m-1">open or close</summary>
 				<ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-					<li>
+					<li onClick={() => handleJobsFilter("all")}>
 						<a>All</a>
 					</li>
-					<li>
-						<a> Remote</a>
+					<li onClick={() => handleJobsFilter("remote")}>
+						<a>Remote</a>
 					</li>
-					<li>
+					<li onClick={() => handleJobsFilter("onsite")}>
 						<a>OnSite</a>
 					</li>
 				</ul>
@@ -42,7 +60,7 @@ const AppliedJobs = () => {
 
 			<h2>Jobs I applied: {appliedJobs.length}</h2>
 			<ul>
-				{appliedJobs.map((job) => (
+				{displyJobs.map((job) => (
 					<li key={job.id}>
 						<div className="flex justify-between items-center">
 							<div className="flex">
