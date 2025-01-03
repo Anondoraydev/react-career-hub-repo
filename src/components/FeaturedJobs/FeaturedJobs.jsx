@@ -14,7 +14,7 @@ const FeaturedJobs = () => {
 		<div>
 			<div className="text-center ">
 				<h3 className="text-5xl font-extrabold py-5">
-					Featured Jobs :{jobs.length}{" "}
+					Featured Jobs :{jobs.length} 
 				</h3>
 				<p className="font-medium pb-5">
 					Explore thousands of job opportunities with all the information you
