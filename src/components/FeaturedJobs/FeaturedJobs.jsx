@@ -11,7 +11,7 @@ const FeaturedJobs = () => {
 			.then((data) => setJobs(data));
 	}, []);
 	return (
-		<div>
+		<div> 
 			<div className="text-center ">
 				<h3 className="text-5xl font-extrabold py-5">
 					Featured Jobs :{jobs.length} 

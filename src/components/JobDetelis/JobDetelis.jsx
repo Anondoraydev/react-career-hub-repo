@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { saveJobAppliction } from "../utility/localStorge";
@@ -12,6 +13,9 @@ const JobDetelis = () => {
 	};
 	return (
 		<div className="pb-10">
+			<Helmet>
+				<title>Career Hub :{id}</title>
+			</Helmet>
 			<h2 className="font-extrabold text-[32px] text-center mt-10 mb-10">
 				Job Details
 			</h2>

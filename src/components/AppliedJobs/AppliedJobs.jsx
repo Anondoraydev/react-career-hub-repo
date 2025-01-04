@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { AiFillDollarCircle } from "react-icons/ai";
 import { FaLocationDot } from "react-icons/fa6";
 import { useLoaderData } from "react-router-dom";
@@ -43,6 +44,9 @@ const AppliedJobs = () => {
 	};
 	return (
 		<div>
+			<Helmet>
+				<title>Career Hub | Applied Jobs</title>
+			</Helmet>
 			<details className="dropdown">
 				<summary className="btn m-1">open or close</summary>
 				<ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
